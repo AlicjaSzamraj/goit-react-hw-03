@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ContactList from "./components/ContactList";
+import ContactForm from "./components/ContactForm";
 import SearchBox from "./components/SearchBox";
+import { nanoid } from "nanoid";
 import "./App.module.css";
 
 const App = () => {
@@ -12,6 +14,14 @@ const App = () => {
   ]);
 
   const [filter, setFilter] = useState("");
+
+  const addContact = (newContact) => {
+    setContacts((prevContacts) => [
+      ...prevContacts,
+      { ...newContact, id: nanoid() },
+    ]);
+  };
+
   const handleSearch = (searchQuery) => {
     setFilter(searchQuery);
   };
@@ -24,6 +34,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Phonebook</h1>
+      <ContactForm addContact={addContact} />
       <SearchBox handleSearch={handleSearch} />
       <ContactList contacts={getFilteredContacts()} />
     </div>
