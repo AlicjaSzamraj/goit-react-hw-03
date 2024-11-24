@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-import "./ContactForm.module.css";
+import styles from "./ContactForm.module.css";
 
 const validationSchema = yup.object().shape({
   name: yup
@@ -26,16 +26,16 @@ const ContactForm = ({ addContact }) => {
         resetForm();
       }}
     >
-      <Form className="contact-form">
-        <label htmlFor="name">Name</label>
-        <Field type="text" name="name" />
-        <ErrorMessage name="name" component="div" className="error-message" />
+      <Form className={styles.contactForm}>
+        <label className={styles.label} htmlFor="name">Name</label>
+        <Field className={styles.input} type="text" name="name" />
+        <ErrorMessage name="name" component="div" className={styles.errorMessage} />
 
         <label htmlFor="number">Number</label>
-        <Field type="text" name="number" />
-        <ErrorMessage name="number" component="div" className="error-message" />
+        <Field className={styles.input} type="text" name="number" />
+        <ErrorMessage name="number" component="div" className={styles.errorMessage} />
 
-        <button type="submit">Add Contact</button>
+        <button className={styles.button} type="submit">Add Contact</button>
       </Form>
     </Formik>
   );

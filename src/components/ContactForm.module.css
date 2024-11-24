@@ -1,39 +1,38 @@
-.contact-form {
+.contactForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  
+  margin-bottom: 10px;
 }
 
-label {
+.label {
   margin-bottom: 5px;
 }
 
-input {
+.input {
   margin-bottom: 10px;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid #000000;
   border-radius: 4px;
 }
-input:focus {
+.input:focus {
   border-color: #1f74ce;
   outline: none;
 }
 
-button {
-  padding: 5px 10px;
+.button {
+  padding: 8px;
   border-radius: 4px;
-  background-color: #e1dada;
+  background-color: #d7d2d2;
   color: rgb(6, 6, 6);
   border-color: #000000;
   cursor: pointer;
+  max-width: 120px;
 }
 
-button:hover {
-  background-color: #616161;
+.button:hover {
+  background-color: #8d8b8b;
 }
 
-.error-message {
+.errorMessage {
   color: red;
- }
+}
