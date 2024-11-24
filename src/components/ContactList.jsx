@@ -1,12 +1,16 @@
-import React from 'react';
-import Contact from './Contact';
-import './ContactList.module.css';
+import React from "react";
+import Contact from "./Contact";
+import "./ContactList.module.css";
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, deleteContact }) => {
   return (
-    <ul>
+    <ul className="contact-list">
       {contacts.map((contact) => (
-        <Contact key={contact.id} contact={contact} />
+        <Contact
+          key={contact.id}
+          contact={contact}
+          deleteContact={deleteContact}
+        />
       ))}
     </ul>
   );
