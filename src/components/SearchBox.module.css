@@ -1,4 +1,4 @@
-input {
+.input {
   padding: 5px;
   border: 2px solid #000000;
   border-radius: 4px;
@@ -8,7 +8,7 @@ input {
   transition: border-color 0.3s; 
 }
 
-input:focus {
+.input:focus {
   border-color: #1f74ce; 
   outline: none; 
 }
